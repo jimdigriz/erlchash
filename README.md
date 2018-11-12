@@ -23,7 +23,7 @@ Lookups:
 
     2> erlchash:lookup(cheese, C).
     one
-    3> erlchash:lookup(cow, C).   
+    3> erlchash:lookup(cow, C).
     three
 
 Insert a node:
