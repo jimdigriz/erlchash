@@ -9,10 +9,8 @@
 
 -type ?MODULE() :: gb_trees:gb_tree().
 
--spec new(list(term())) -> {ok,?MODULE()} | {error,atom()}.
-new([]) ->
-	{error,empty};
-new(Nodes) when is_list(Nodes) ->
+-spec new(list(term())) -> ?MODULE().
+new(Nodes) when is_list(Nodes), Nodes =/= [] ->
 	lists:foldl(fun insert/2, gb_trees:empty(), Nodes).
 
 -spec insert(term(), ?MODULE()) -> ?MODULE().
