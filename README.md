@@ -13,8 +13,6 @@ Add to your `Makefile`:
 
 # Usage
 
-The maximum number of nodes you can insert is `2^27-1`, but you should not even try to approach this number.
-
 Create a new consistent hash object:
 
     1> CHash = erlchash:new([one,two,three])).
@@ -33,6 +31,11 @@ Insert a node:
 Delete a node (potentially slow for a large number of inserted nodes):
 
     5> C3 = erlchash:delete(two, C2).
+
+## Constraints
+
+ * The maximum number of nodes you can insert is `2^27-1`, you should not even try to approach this number
+ * The object can never be empty (you cannot create an empty object or delete to leave zero objects)
 
 # Development
 
