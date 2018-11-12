@@ -35,7 +35,7 @@ Delete a node (potentially slow for a large number of inserted nodes):
 ## Constraints
 
  * The maximum number of nodes you can insert is `2^27-1`, you should not even try to approach this number
- * The object can never be empty (you cannot create an empty object or delete to leave zero objects)
+ * The object can never be empty (you cannot create an empty object or delete to leave zero nodes)
 
 # Development
 
