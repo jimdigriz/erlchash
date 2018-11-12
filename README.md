@@ -15,7 +15,7 @@ Add to your `Makefile`:
 
 Create a new consistent hash object:
 
-    1> CHash = erlchash:new([one,two,three])).
+    1> C = erlchash:new([one,two,three])).
 
 Lookups:
 
@@ -34,8 +34,8 @@ Delete a node (potentially slow for a large number of inserted nodes):
 
 ## Constraints
 
- * The maximum number of nodes you can insert is `2^27-1`, you should not even try to approach this number
- * The object can never be empty (you cannot create an empty object or delete to leave zero nodes)
+ * maximum number of nodes you can insert is `2^27-1`, you should not even try to approach this number
+ * can never be empty (you cannot create using an empty list or delete all nodes)
 
 # Development
 
