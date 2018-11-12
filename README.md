@@ -15,8 +15,6 @@ Add to your `Makefile`:
 
 The maximum number of nodes you can insert is `2^27-1`, but you should not even try to approach this number.
 
-## `erlchash`
-
 Create a new consistent hash object:
 
     1> CHash = erlchash:new([one,two,three])).
