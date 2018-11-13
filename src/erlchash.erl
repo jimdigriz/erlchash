@@ -19,8 +19,8 @@ insert(Node, CHash) ->
 	insert(Node, CHash, 0).
 
 -spec delete(term(), ?MODULE()) -> ?MODULE().
-delete(Node, CHash0) ->
-	delete(Node, gb_trees:empty(), gb_trees:next(gb_trees:iterator(CHash0))).
+delete(Node, CHash) ->
+	delete(Node, gb_trees:empty(), gb_trees:next(gb_trees:iterator(CHash))).
 
 -spec lookup(term(), ?MODULE()) -> term().
 lookup(Term, CHash) ->

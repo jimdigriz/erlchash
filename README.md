@@ -28,7 +28,7 @@ Insert a node:
 
     4> C2 = erlchash:insert(four, C).
 
-Delete a node (potentially slow for a large number of inserted nodes):
+Delete a node (potentially slow for a large number of inserted nodes; operation is `O(N)`):
 
     5> C3 = erlchash:delete(two, C2).
 
